@@ -17,6 +17,7 @@ body {
   background: #2e3235;
 }
 
+.container--placeBid,
 .container--register {
   color: #ebb997;
   display: flex;
@@ -26,6 +27,11 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat, repeat;
+}
+
+.container--placeBid {
+  background-image: none;
+  background-color: #2e3235;
 }
 
 .form--register {
@@ -38,6 +44,24 @@ body {
   border-radius: 3%;
   font-weight: 500;
   font-size: 1rem;
+}
+
+.form--placeBid {
+  background-color: #222426;
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 50rem;
+  padding: 1% 1%;
+  border-radius: 3%;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.form--placeBid--cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: center; */
 }
 
 select,
