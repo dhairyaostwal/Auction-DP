@@ -19,6 +19,19 @@ const getAllAnonUsers = async (req, res, next) => {
     });
   }
 };
+const getAllUsers = async (req, res, next) => {
+  const array = await Users.find({});
+  if (array.length == 0) {
+    return res.status(404).json({
+      message: "No Anon found",
+    });
+  } else {
+    return res.status(200).json({
+      message: "Success",
+      data: array,
+    });
+  }
+};
 
 const postNewAccount = async (req, res, next) => {
 
