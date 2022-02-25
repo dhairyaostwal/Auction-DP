@@ -95,6 +95,6 @@ const postNewAccount = async (req, res, next) => {
 
 module.exports ={
     postNewAccount,
-    getAllAnonUsers
-
+    getAllAnonUsers,
+    getAllUsers
 }
