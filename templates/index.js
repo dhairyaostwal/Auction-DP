@@ -36,7 +36,7 @@ function submitData(){
 }
 
 function getData(){
-
+  // document.getElementById("head").innerText = "Auction Bidder's profile"
     var requestOptions = {
         method: 'GET',
         redirect: 'follow'

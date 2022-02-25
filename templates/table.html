@@ -15,20 +15,33 @@
 </head>
 
 <body style="color:white">
-    <input type="button" value="Generate Table" onclick="getData()" />
+    <input type="button" value="Show all bidder profile" onclick="getData()" />
 
-    <div class="container--placeBid" style="height: 100vh;">
-
+    <div class="container--placeBid" style="height: 10vh;">
+       
         <div class="form--register">
-                    <h3 style="margin-bottom: 5%;">
-                        AuctioNation
-                    </h3>
-                    <hr />
-                    <table id="dvTable">
+            <h3 style="margin-bottom: 5%;">
+                AuctioNation
+            </h3>
                     
+                    <hr /> 
+                    <table id="dvTable">
+                        <tr>
+                            <th> Aadhar ID</th>
+                            <th> Age </th>
+                            <th> City </th>
+                            <th> State </th>
+                            <th> First and Last Name </th>
+                            <th> Gender </th>
+                            <th> Piincode   </th>
+                            <th> ID </th>
+                        </tr>
                     </table>
 
         </div>
+        <br><br><br>
+        <!-- <h3 id="head" style="margin-top: 10px;"></h3> -->
+                 
     </div>
     <script src="./index.js"></script>
 </body>
