@@ -9,7 +9,6 @@ table {
   border-spacing: 0 15px;
 }
 
-
 td {
   width: 150px;
   text-align: center;
@@ -41,9 +40,33 @@ td {
   background-repeat: no-repeat, repeat;
 }
 
+.container--result,
 .container--placeBid {
   background-image: none;
   background-color: #2e3235;
+}
+
+.container--result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#tableContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+th{
+  text-align: center;
+}
+
+#dvTable {
+  background-color: #c3cadb;
+  color: #222426;
+  padding: 1rem;
+  border-radius: 20px 20px;
 }
 
 .form--register {
