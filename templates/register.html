@@ -11,6 +11,7 @@
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../static/styles/style.css">
+    
     <title>Document</title>
 </head>
 
@@ -19,31 +20,23 @@
     <div class="container--register" style="height: 100vh;">
         <div class="form--register">
             <form action="">
-                <label for="">AADHAAR Id: </label><br><input type="number"><br>
-                <label for="">First Name: </label><br><input type="text"><br>
-                <label for="">Last Name: </label><br><input type="text"><br>
+                <label for="">AADHAAR Id: </label><br><input id="aadhar" name="aadhar" type="number"><br>
+                <label for="">First Name: </label><br><input id="first" name="first" type="text"><br>
+                <label for="">Last Name: </label><br><input id="last" name="last" type="text"><br>
                 <fieldset>
                     Gender:<br>
-                    <input type="radio" name="" id="" value="Male"> Male<br>
-                    <input type="radio" name="" id="" value="Female"> Female<br>
+                    <input type="text" name="male" id="gender" value=""><br>
                 </fieldset>
-                <label for="">Age: </label><br><input type="number"><br>
-                <label for="">State: </label><br>
-                <select>
-                    <option>--Select--</option>
-                    <option>Gujarat</option>
-                    <option>Bangalore</option>
-                    <option>Rajasthan</option>
-                    <option>Uttar Pradesh</option>
-                </select><br>
-                <label for="">City: </label><br><input type="text"><br>
-                <label for="">Pin Code: </label><br><input type="number"><br>
-
-                <a class="btn btn-register" type="submit" href="./place_bid_1.html">Submit</a>
+                <label for="">Age: </label><br><input id="age" name="age" type="number"><br>
+                <label for="">State: </label><br> <input id="state" name="state" type="text"> <br>
+                <label for="">City: </label><br><input id="city" name="city" type="text"><br>
+                <label for="">Pin Code: </label><br><input  id="pincode" name="pincode" type="number"><br>
+                <input class="button" name="submit" type="button" value="submit" onclick="submitData()" />
+                <!-- <a class="btn btn-register" type="submit">Submit</a> -->
             </form>
         </div>
     </div>
-
+    <script src="./index.js"></script>
 </body>
 
 </html>
