@@ -27,7 +27,7 @@ function submitData(){
         }
       });
       
-      xhr.open("POST", "http://localhost:3000/api/new");
+      xhr.open("POST", "https://dp-auction.herokuapp.com/api/new");
       xhr.setRequestHeader("Content-Type", "application/json");
       
       xhr.send(data)
@@ -42,7 +42,7 @@ function getData(){
         redirect: 'follow'
       };
       
-      fetch("http://localhost:3000/api/all", requestOptions)
+      fetch("https://dp-auction.herokuapp.com/api/all", requestOptions)
         .then(response => response.text())
         .then(result => {
             var table = document.getElementById('dvTable');
