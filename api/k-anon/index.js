@@ -846,8 +846,14 @@ const category = async (age)=>{
     return `< ${n}`
 
 }
+
+const categoryBid = async (bid)=>{
+    n = Math.ceil(bid/100)*100;
+    return `< ${n}`
+}
 module.exports = {
     supress,
     random,
-    category
+    category,
+    categoryBid
 }

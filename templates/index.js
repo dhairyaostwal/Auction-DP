@@ -32,7 +32,7 @@ function submitData() {
 
   xhr.send(data);
 
-  window.location.replace('./table.html');
+  // window.location.replace('./table.html');
 }
 
 function getData() {
@@ -129,4 +129,39 @@ function getData() {
       document.body.appendChild(tableContainer);
     })
     .catch((error) => console.log('error', error));
+}
+
+function placeBid() {
+  var id = document.getElementById('id').value;
+  var item_id = document.getElementById('item_id').value;
+  var name = document.getElementById('name').value;
+  var initial_bid = document.getElementById('initial_bid').value;
+  var selling_bid = document.getElementById('selling_bid').value;
+  var credit_card = document.getElementById('credit_card').value;
+
+  var data = JSON.stringify({
+    id: id,
+    item_id: item_id,
+    name: name,
+    initial_bid: initial_bid,
+    selling_bid: selling_bid,
+    credit_card: credit_card,
+  });
+  console.log(data);
+
+  var xhr = new XMLHttpRequest();
+  //   xhr.withCredentials = true;
+
+  xhr.addEventListener('readystatechange', function () {
+    if (this.readyState === 4) {
+      console.log(this.responseText);
+    }
+  });
+
+  xhr.open('POST', 'https://dp-auction.herokuapp.com/api/new/bid');
+  xhr.setRequestHeader('Content-Type', 'application/json');
+
+  xhr.send(data);
+
+  // window.location.replace('./table.html');
 }
