@@ -149,9 +149,41 @@ const postNewAccount = async (req, res, next) => {
     }
   };
 
+  const getAllTransactions= async (req, res, next) => {
+    const array = await anontransaction.find({});
+    if (array.length == 0) {
+      return res.status(404).json({
+        message: "No Anon found",
+      });
+    } else {
+      return res.status(200).json({
+        message: "Success",
+        data: array,
+      });
+    }
+  };
+
+  const getAllOriginalTransactions= async (req, res, next) => {
+    const array = await transaction.find({});
+    if (array.length == 0) {
+      return res.status(404).json({
+        message: "No Anon found",
+      });
+    } else {
+      return res.status(200).json({
+        message: "Success",
+        data: array,
+      });
+    }
+  };
+
+  
+
 module.exports ={
     postNewAccount,
     getAllAnonUsers,
     getAllUsers,
-    placeNewBid
+    placeNewBid,
+    getAllTransactions,
+    getAllOriginalTransactions
 }
